@@ -23,6 +23,11 @@ The installer selects agent and project/user scope. These instructions work with
 agents that support the `SKILL.md` format, including Codex and Claude Code.
 While this repository is private, installation requires GitHub repository access
 and working Git authentication. The install command does not grant that access.
+If GitHub access is configured through SSH, use the authenticated Git source:
+
+```sh
+npx skills add git@github.com:Flowdular/skills.git
+```
 
 ## Skills
 
