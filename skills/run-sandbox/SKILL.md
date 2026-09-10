@@ -22,12 +22,14 @@ The SDK's `modules/sandbox` entry is the platform access/grant module.
 - To run without installing it in the application, use
   `npx @flowdular/sandbox@<compatible-version> --workspace /absolute/application`.
   Resolve the application's installed SDK version and check the selected sandbox
-  release's SDK dependency first. The 0.2.0 sandbox depends on SDK 0.2.0. Do not
+  release's SDK dependency first. Sandbox 0.2.1 depends on SDK 0.2.0. Do not
   upgrade the application or select an unrelated `latest` merely to launch it.
 
 Check npm availability before proposing a version. An unpublished release must
 be tested from its verified local tarballs or wait for publication. Do not fall
 back to a removed SDK launcher or install private workspace packages.
+Avoid sandbox 0.2.0: its launcher does not execute through npm's binary symlink.
+Use 0.2.1 or a later compatible patch.
 
 Run the selected executable with `--help` before relying on its flags.
 Supported source flags include `--workspace`, `--host`, `--port`, `--mode`
